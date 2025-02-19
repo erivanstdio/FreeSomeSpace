@@ -30,7 +30,7 @@ A powerful and interactive script to help you find and delete `node_modules` dir
 ### 1. Download the Script
 Download the script to your desired location using `curl`:
 ```bash
-curl -O https://raw.githubusercontent.com/your-username/your-repo/main/delete_node_modules.sh
+curl -O https://raw.githubusercontent.com/erivanstdio/FreeSomeSpace/main/delete_node_modules.sh
 ```
 
 ## 2. Make the Script Executable
@@ -155,9 +155,9 @@ This script is provided under the MIT License. Feel free to use, modify, and dis
 
 ## Author 👨‍💻
 
-**Your Name**  
-GitHub: [your-username](https://github.com/your-username)  
-Email: your-email@example.com
+**Erivan Brunno**  
+GitHub: [erivanstio](https://github.com/erivanstio)  
+Email: erivanstdio@gmail.com
 
 ## Feedback 💬
 
