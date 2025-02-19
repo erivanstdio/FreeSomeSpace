@@ -9,7 +9,7 @@ A powerful and interactive script to help you find and delete `node_modules` dir
 
 ## Features ✨
 
-- **Interactive Selection**: Use `fzf` to easily select which `node_modules` directories to delete.
+- **Interactive Selection**: Use `fzf` (fuzzy finder) to easily select which `node_modules` directories to delete.
 - **Safe Deletion**: Prompts for confirmation before deleting each directory—no accidental deletions!
 - **Cross-Project Support**: Works across multiple projects in a specified directory.
 - **Dependency Check**: Automatically checks for and installs missing dependencies (like `fzf`).
