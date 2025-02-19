@@ -1,164 +1,176 @@
 # FreeSomeSpace
-A shell script that interactively asks the user to delete node_modules from unused projects.
+Um script shell que interage com usuário para excluir `node_modules` de projetos não utilizados.  
 
 # Delete `node_modules` Script 🗑️
 
-A powerful and interactive script to help you find and delete `node_modules` directories, freeing up valuable disk space on your Mac. Perfect for developers juggling multiple projects! 🚀
+Um script poderoso e interativo para ajudar você a encontrar e excluir diretórios `node_modules`, liberando espaço valioso no disco do seu Mac. Perfeito para desenvolvedores que trabalham com vários projetos! 🚀  
 
 ---
 
 ## Features ✨
 
-- **Interactive Selection**: Use `fzf` (fuzzy finder) to easily select which `node_modules` directories to delete.
-- **Safe Deletion**: Prompts for confirmation before deleting each directory—no accidental deletions!
-- **Cross-Project Support**: Works across multiple projects in a specified directory.
-- **Dependency Check**: Automatically checks for and installs missing dependencies (like `fzf`).
-- **User-Friendly**: Designed with clear instructions and prompts for ease of use.
+- **Seleção Interativa**: Usa `fzf` (fuzzy finder) para selecionar facilmente quais diretórios `node_modules` deletar.  
+- **Exclusão Segura**: Solicita confirmação antes de excluir cada diretório—evitando exclusões acidentais!  
+- **Suporte Multi-Projeto**: Funciona em vários projetos dentro de um diretório específico.  
+- **Verificação de Dependências**: Verifica automaticamente e instala dependências ausentes (como `fzf`).  
+- **Fácil de Usar**: Projetado com instruções claras e prompts intuitivos.  
 
 ---
 
-## Prerequisites 📋
+## Pré-requisitos 📋  
 
-- **MacOS**: This script is optimized for MacOS.
-- **Homebrew**: Required to install missing dependencies (like `fzf`).
-- **Basic Terminal Knowledge**: You should be comfortable running commands in the terminal.
+- **MacOS**: O script foi montado para MacOS.  
+- **Homebrew**: Necessário para instalar dependências ausentes (como `fzf`).    
 
 ---
 
-## Installation 🛠️
+## Instalação 🛠️  
 
-### 1. Download the Script
-Download the script to your desired location using `curl`:
+### 1. Baixar o Script  
+Faça o download do script para o local desejado usando `curl`:  
 ```bash
 curl -O https://raw.githubusercontent.com/erivanstdio/FreeSomeSpace/main/delete_node_modules.sh
 ```
 
-## 2. Make the Script Executable
+### 2. Tornar o Script Executável  
 
-Run the following command to make the script executable:
+Execute o seguinte comando para permitir a execução do script:  
+
 
 ```bash
 chmod +x delete_node_modules.sh
 ```
 
 
-## 3. (Optional) Add the Script to Your PATH
+### 3. (Opcional) Adicionar o Script ao PATH  
 
-To run the script from anywhere, move it to a directory in your PATH, such as `/usr/local/bin` or `~/bin`:
+Para executar o script de qualquer lugar, mova-o para um diretório no seu PATH, como `/usr/local/bin` ou `~/bin`:  
 
 ```bash
 mkdir -p ~/bin
 mv delete_node_modules.sh ~/bin/delete_node_modules
 ```
 
-Then, add `~/bin` to your PATH by adding the following line to your shell configuration file (`~/.zshrc` or `~/.bashrc`):
+Depois, adicione `~/bin` ao seu PATH, inserindo a seguinte linha no arquivo de configuração do seu shell (`~/.zshrc` ou `~/.bashrc`):  
 
 ```bash
 export PATH="$HOME/bin:$PATH"
 ```
 
-Reload your shell configuration:
+Recarregue a configuração do shell:  
 
 ```bash
 source ~/.zshrc  # or ~/.bashrc
 ```
 
-## Usage 🚀
+---
 
-### Basic Usage
+## Uso 🚀  
 
-Run the script in the current directory:
+### Uso Básico  
+
+Execute o script no diretório atual:  
 
 ```bash
 delete_node_modules
 ```
 
-### Specify a Directory
+### Especificar um Diretório  
 
-To search for `node_modules` in a specific directory, use the `--dir` option:
+Para buscar `node_modules` em um diretório específico, use a opção `--dir`:  
 
 ```bash
 delete_node_modules --dir /path/to/your/directory
 ```
 
-### Help
+### Ajuda  
 
-To see the help message, use the `--help` option:
+Para ver a mensagem de ajuda, use a opção `--help`:  
 
 ```bash
 delete_node_modules --help
 ```
+---
 
-## How It Works ⚙️
+## Como Funciona ⚙️  
 
-- The script searches for all `node_modules` directories starting from the specified directory (or the current directory if none is specified).
-- It displays the size of each `node_modules` directory.
-- You can interactively select which directories to delete using `fzf`.
-- The script asks for confirmation before deleting each selected directory.
+- O script procura todos os diretórios `node_modules` a partir do diretório especificado (ou do diretório atual, se nenhum for indicado).  
+- Exibe o tamanho de cada diretório `node_modules`.  
+- Permite selecionar interativamente quais diretórios deseja excluir usando `fzf`.  
+- Solicita confirmação antes de excluir cada diretório selecionado.  
 
-## Example Workflow 📂
+---
 
-### Step 1: Navigate to Your Projects Directory
+## Exemplo de Uso 📂  
+
+### Passo 1: Navegar até o Diretório dos Projetos  
 
 ```bash
 cd /path/to/your/projects
 ```
-
-### Step 2: Run the Script
+### Passo 2: Executar o Script
 
 ```bash
 delete_node_modules
 ```
 
-### Step 3: Select Directories to Delete
+### Passo 3: Selecionar Diretórios para Excluir  
 
-- Use the arrow keys to navigate the list of `node_modules` directories.
-- Press Tab to select multiple directories.
-- Press Enter to confirm your selection.
+- Use as setas do teclado para navegar pela lista de diretórios `node_modules`.  
+- Pressione **Tab** para selecionar vários diretórios.  
+- Pressione **Enter** para confirmar sua seleção.  
 
-### Step 4: Confirm Deletion
+### Passo 4: Confirmar a Exclusão  
 
-For each selected directory, the script will ask for confirmation before deleting it.  
-Type `y` to delete or `n` to skip.
+Para cada diretório selecionado, o script pedirá uma confirmação antes de excluir.  
+Digite `y` para excluir ou `n` para pular.  
 
-## Troubleshooting 🛠️
+---
 
-### Script Is Not Executable
+## Solução de Problemas 🛠️  
 
-If you see an error like **Permission denied**, make sure the script is executable:
+### O Script Não Está Executável  
+
+Se aparecer um erro como **Permissão negada**, certifique-se de que o script é executável:  
 
 ```bash
 chmod +x delete_node_modules.sh
 ```
 
-### Missing Dependencies
+### Dependências Ausentes  
 
-If the script reports missing dependencies (e.g., `fzf`), you can install them using Homebrew:
+Se o script relatar dependências ausentes (como `fzf`), instale-as usando Homebrew:  
 
 ```bash
 brew install fzf
 ```
 
-### Script Not Found
+### Script Não Encontrado  
 
-If you see an error like **command not found: delete_node_modules**, ensure the script is in your PATH:
+Se aparecer um erro como **comando não encontrado: delete_node_modules**, verifique se o script está no seu PATH:  
 
 ```bash
 echo $PATH
 ```
 
-If `~/bin` is not listed, add it to your PATH as described in the **Installation** section.
+Se `~/bin` não estiver listado, adicione-o ao seu PATH conforme descrito na seção **Instalação**.  
 
-## License 📜
+---
 
-This script is provided under the MIT License. Feel free to use, modify, and distribute it as needed.
+## Licença 📜  
 
-## Author 👨‍💻
+Este script é fornecido sob a Licença MIT. Sinta-se à vontade para usar, modificar e distribuí-lo conforme necessário.  
+
+---
+
+## Autor 👨‍💻  
 
 **Erivan Brunno**  
 GitHub: [erivanstio](https://github.com/erivanstio)  
-Email: erivanstdio@gmail.com
+E-mail: erivanstdio@gmail.com  
 
-## Feedback 💬
+---
 
-If you have any questions, suggestions, or issues, please open an issue on GitHub or contact me directly. Your feedback is highly appreciated! 🙌
+## Feedback 💬  
+
+Se tiver dúvidas, sugestões ou encontrar problemas, abra uma issue no GitHub ou entre em contato diretamente. Seu feedback é muito bem-vindo! 🙌  
