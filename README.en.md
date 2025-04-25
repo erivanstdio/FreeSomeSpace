@@ -156,7 +156,7 @@ This script is provided under the MIT License. Feel free to use, modify, and dis
 ## Author 👨‍💻
 
 **Erivan Brunno**  
-GitHub: [erivanstio](https://github.com/erivanstio)  
+GitHub: [erivanstdio](https://github.com/erivanstdio)  
 Email: erivanstdio@gmail.com
 
 ## Feedback 💬

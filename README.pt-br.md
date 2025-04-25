@@ -166,7 +166,7 @@ Este script é fornecido sob a Licença MIT. Sinta-se à vontade para usar, modi
 ## Autor 👨‍💻  
 
 **Erivan Brunno**  
-GitHub: [erivanstio](https://github.com/erivanstio)  
+GitHub: [erivanstdio](https://github.com/erivanstdio)  
 E-mail: erivanstdio@gmail.com  
 
 ---
